@@ -465,7 +465,7 @@ void Context::drawFrame() {
         Matrix3::scaling({1.0f, -1.0f});
     _shader.setTransformationProjectionMatrix(projection);
 
-    for(std::int_fast32_t n = 0; n < drawData->CmdLists.Size; ++n) {
+    for(std::int_fast32_t n = 0; n < drawData->CmdListsCount; ++n) {
         const ImDrawList* cmdList = drawData->CmdLists[n];
 
         _vertexBuffer.setData(
